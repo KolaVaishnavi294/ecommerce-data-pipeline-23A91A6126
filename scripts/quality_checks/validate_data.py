@@ -180,7 +180,7 @@ def main():
         with open(REPORT_PATH, "w") as f:
             json.dump(report, f, indent=4)
 
-        print("✅ Data quality checks completed")
+        print("Data quality checks completed")
         print(json.dumps(report, indent=2))
 
 

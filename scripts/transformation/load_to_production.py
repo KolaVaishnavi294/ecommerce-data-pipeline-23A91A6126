@@ -142,7 +142,7 @@ def main():
         with open(SUMMARY_PATH, "w") as f:
             json.dump(summary, f, indent=4)
 
-        print("🚀 Staging to production ETL completed")
+        print("Staging to production ETL completed")
         print(json.dumps(summary, indent=2))
 
 

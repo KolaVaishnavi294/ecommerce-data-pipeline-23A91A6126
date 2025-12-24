@@ -262,5 +262,5 @@ if __name__ == "__main__":
     ) as f:
         json.dump(metadata, f, indent=4)
 
-    print("✅ Data generation completed successfully")
+    print("Data generation completed successfully")
     print(json.dumps(metadata, indent=2))

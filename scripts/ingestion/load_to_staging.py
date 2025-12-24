@@ -103,7 +103,7 @@ def main():
         with open(SUMMARY_PATH, "w") as f:
             json.dump(summary, f, indent=4)
 
-        print("📥 Data ingestion completed")
+        print("Data ingestion completed")
         print(json.dumps(summary, indent=2))
 
 
