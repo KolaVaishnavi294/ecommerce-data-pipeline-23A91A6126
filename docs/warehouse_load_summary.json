@@ -1,0 +1,11 @@
+{
+    "start_time": "2025-12-24T11:57:41.857312",
+    "tables_loaded": {},
+    "status": "SUCCESS",
+    "warehouse.dim_date": "SUCCESS",
+    "warehouse.dim_payment_method": "SUCCESS",
+    "warehouse.dim_customers": "SUCCESS",
+    "warehouse.dim_products": "SUCCESS",
+    "warehouse.fact_sales": "SUCCESS",
+    "end_time": "2025-12-24T11:57:43.093510"
+}
