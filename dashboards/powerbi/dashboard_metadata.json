@@ -1,0 +1,17 @@
+{
+  "tool": "Power BI Desktop",
+  "data_source": "PostgreSQL",
+  "database": "ecommerce_db",
+  "schema": "warehouse",
+  "pages": [
+    "Executive Overview",
+    "Product Performance",
+    "Customer Analytics",
+    "Trends & Geography"
+  ],
+  "features": [
+    "Slicers",
+    "Star Schema Relationships"
+  ],
+  "status": "Completed"
+}
