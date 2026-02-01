@@ -48,11 +48,11 @@ git clone https://github.com/KolaVaishnavi294/ecommerce-data-pipeline-23A91A6126
 cd ecommerce-data-pipeline-23A91A6126
 pip install -r requirements.txt
 ```
-### Start PostgreSQL using Docker:
+### Start Database & Pipeline using Docker:
 ```bash
-docker-compose up -d
+docker-compose -f docker/docker-compose.yml up --build
 ```
-### Verify database container:
+### Verify running containers:
 
 ```bash
 docker ps
@@ -70,12 +70,9 @@ docker ps
 - warehouse – Dimensional star schema for analytics
 
 ### Running the Pipeline
-Run the entire pipeline using a single command:
+The pipeline is executed automatically inside the Docker container.
 
-```bash
-python scripts/orchestration/pipeline_runner.py
-```
-This executes:
+Pipeline steps executed:
 
 - Data generation
 
@@ -87,11 +84,11 @@ This executes:
 
 - Warehouse loading
 
-### Run data quality checks only:
-
+Pipeline execution logs are displayed in the container output and written to:
 ```bash
-python scripts/quality_checks/validate_data.py
+ logs/pipeline.log
 ```
+
 ## ⏱️ Orchestration & Automation
 
 - Centralized pipeline orchestration using Python
@@ -102,11 +99,6 @@ python scripts/quality_checks/validate_data.py
 
 - Windows-compatible logging (emoji-free)
 
-Logs are generated in:
-
-```bash
-logs/pipeline.log
-```
 ## 📊 Power BI Dashboard
 
 Power BI Desktop is used as the analytics and visualization layer, connected directly to the PostgreSQL warehouse schema.
@@ -148,7 +140,7 @@ Automated unit tests are implemented using PyTest.
 Run all tests:
 
 ```bash
-python -m pytest tests/ -v
+pytest tests/ -v
 ```
 ### Tests validate:
 
