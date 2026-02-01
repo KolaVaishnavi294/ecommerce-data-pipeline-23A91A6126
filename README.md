@@ -6,6 +6,9 @@
 
 ---
 
+![Pipeline CI](https://github.com/KolaVaishnavi294/ecommerce-data-pipeline-23A91A6126/actions/workflows/ci.yml/badge.svg)
+
+
 ## 📌 Project Overview
 
 This project implements an **end-to-end ETL data engineering pipeline** for an e-commerce analytics platform.  
