@@ -1,9 +1,10 @@
-name: CI
+name: Pipeline
 
 on:
   push:
-    branches: [ main ]
+    branches: [ "main" ]
   pull_request:
+    branches: [ "main" ]
 
 jobs:
   test:
@@ -11,18 +12,24 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: 3.9
+          python-version: "3.9"
 
       - name: Install dependencies
         run: |
+          python -m pip install --upgrade pip
           pip install -r requirements.txt
-          pip install pytest
 
-      - name: Run tests
+      #  IMPORTANT: Generate raw CSV data for tests
+      - name: Generate raw data
         run: |
-          pytest tests/ -v
+          python scripts/data_generation/generate_data.py
+
+      #  Run ONLY unit tests (NO DB, NO Docker)
+      - name: Run unit tests
+        run: |
+          pytest tests/test_data_generation.py -v
