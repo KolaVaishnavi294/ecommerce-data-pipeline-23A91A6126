@@ -1,5 +1,5 @@
 {
-    "start_time": "2025-12-24T11:19:27.667964",
+    "start_time": "2025-12-24T12:30:49.203076",
     "tables_loaded": {
         "staging.customers": "customers.csv",
         "staging.products": "products.csv",
@@ -7,5 +7,5 @@
         "staging.transaction_items": "transaction_items.csv"
     },
     "status": "SUCCESS",
-    "end_time": "2025-12-24T11:19:47.137513"
+    "end_time": "2025-12-24T12:31:03.669303"
 }

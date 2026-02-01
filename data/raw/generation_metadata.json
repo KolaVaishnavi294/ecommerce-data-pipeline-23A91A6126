@@ -1,10 +1,10 @@
 {
-    "generation_timestamp": "2025-12-24T10:54:03.149036",
+    "generation_timestamp": "2026-02-01T05:02:59.845931",
     "records": {
         "customers": 1000,
         "products": 500,
         "transactions": 10000,
-        "transaction_items": 30134
+        "transaction_items": 29664
     },
     "referential_integrity": {
         "orphan_transactions": 0,

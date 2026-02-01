@@ -114,13 +114,9 @@ The pipeline demonstrates data generation, ingestion, data quality validation, s
 ```bash
 pip install -r requirements.txt
 ```
-### Start database using Docker
+### Run full pipeline using Docker
 ```bash
-docker-compose up -d
-```
-### Run full pipeline
-```bash
-python scripts/orchestration/pipeline_runner.py
+docker-compose -f docker/docker-compose.yml up --build
 ```
 ### Run tests
 ```bash

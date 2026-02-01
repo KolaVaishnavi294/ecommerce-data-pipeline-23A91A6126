@@ -1,11 +1,11 @@
 {
-    "check_timestamp": "2025-12-24T11:44:31.535433",
+    "check_timestamp": "2025-12-24T12:31:03.945848",
     "checks": {
         "null_checks": {
             "customers.email": 0
         },
         "duplicate_checks": {
-            "duplicate_customers": 0
+            "duplicate_customers": 1000
         },
         "referential_integrity": {
             "orphan_transactions": 0,

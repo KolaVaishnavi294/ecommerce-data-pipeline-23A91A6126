@@ -1,5 +1,3 @@
-version: "3.8"
-
 services:
   postgres:
     image: postgres:14
@@ -14,10 +12,26 @@ services:
       - postgres_data:/var/lib/postgresql/data
       - ../sql/ddl:/docker-entrypoint-initdb.d
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U admin"]
+      test: ["CMD-SHELL", "pg_isready -U admin -d ecommerce_db"]
       interval: 10s
       timeout: 5s
       retries: 5
+
+  pipeline:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: pipeline
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_NAME: ecommerce_db
+      DB_USER: admin
+      DB_PASSWORD: password
+    command: python scripts/orchestration/pipeline_runner.py
 
 volumes:
   postgres_data:

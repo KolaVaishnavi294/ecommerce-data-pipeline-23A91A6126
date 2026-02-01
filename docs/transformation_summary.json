@@ -1,11 +1,7 @@
 {
-    "start_time": "2025-12-24T11:53:33.001622",
-    "tables_loaded": {
-        "production.customers": "SUCCESS",
-        "production.products": "SUCCESS",
-        "production.transactions": "SUCCESS",
-        "production.transaction_items": "SUCCESS"
-    },
-    "status": "SUCCESS",
-    "end_time": "2025-12-24T11:53:34.403302"
+    "start_time": "2025-12-24T12:31:04.337999",
+    "tables_loaded": {},
+    "status": "FAILED",
+    "error": "duplicate key value violates unique constraint \"customers_pkey\"\nDETAIL:  Key (customer_id)=(CUST0001) already exists.\n",
+    "end_time": "2025-12-24T12:31:04.461299"
 }
